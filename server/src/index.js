@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const helmet = require('helmet');
 const cors = require('cors');
+const wordsList = require('./API/wordsList');
 require('dotenv').config();
 
 const { notFound, errorHandler } = require('./middlewares');
@@ -24,6 +25,8 @@ app.get('/', (req, res) => {
     message: 'Hello! No content here atm ;)',
   });
 });
+
+app.use('/api/wordsList', wordsList);
 
 app.use(notFound);
 app.use(errorHandler);
