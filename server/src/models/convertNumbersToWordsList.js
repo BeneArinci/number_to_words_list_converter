@@ -11,7 +11,12 @@ const NUMBERS_VALUES = {
   0: [' '],
 };
 
-const getValuesList = (input) => input.split('').map((singleNumber) => NUMBERS_VALUES[singleNumber]);
+const getValuesList = (input) => input.split('').map((singleChar) => {
+  if (!NUMBERS_VALUES[singleChar]) {
+    throw new Error(`Invalid character: "${singleChar}". Please provide only numbers (0-9) as input.`);
+  }
+  return NUMBERS_VALUES[singleChar];
+});
 
 const buildWordsList = (arraysList) => {
   if (arraysList.length === 1) {

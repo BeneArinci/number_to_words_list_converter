@@ -10,7 +10,7 @@ Build a basic fullstack app that would allow the user to submit a string of numb
 * Set up API Get wordsList route
   - route setup [x]
   - convertNumbersToWordsList function dev [x]
-  - edge case: input is not valid []
+  - edge case: input is not valid [x]
 * Set up client []
   - add form []
   - single word component []
