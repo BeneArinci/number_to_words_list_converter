@@ -3,6 +3,8 @@ import { useState } from 'react';
 import ListGroup from 'react-bootstrap/listGroup';
 import Row from 'react-bootstrap/Row'
 
+import NumbersKeyboard from './Components/NumbersKeyboard/NumbersKeyboard'
+
 
 const App = () => {
 
@@ -23,6 +25,7 @@ const App = () => {
 
   return (
 		<div>
+			<NumbersKeyboard></NumbersKeyboard>
 			<center>
 				<form>
 					<label>

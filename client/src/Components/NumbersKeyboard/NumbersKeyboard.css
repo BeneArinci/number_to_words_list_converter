@@ -1,0 +1,33 @@
+.key {
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+}
+
+.row {
+    margin: 1rem;
+    width: 50%;
+    min-width: 50%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.keyboard {
+    width: 100%;
+    min-width: 50rem;
+    display: table
+}
+
+.center {
+    margin: auto;
+    padding: 10px;
+}
+
+span {
+    display: block;
+    margin-top: 0.1rem;
+    font-size: 1rem;
+}
