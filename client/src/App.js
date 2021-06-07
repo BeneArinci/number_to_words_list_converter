@@ -15,6 +15,10 @@ const App = () => {
 		setGetInput(getInput+number)
 	}
 
+	const onDeleteClick = () => {
+		setGetInput(getInput.slice(0, -1))
+	}
+
 	const convertNumber = async (event) => {
 		event.preventDefault()
 		const apiResponse = await fetch(`http://localhost:8000/api/wordsList?number=${getInput}`)
@@ -28,6 +32,7 @@ const App = () => {
 			<NumbersKeyboard 
 				onNumberClick={onNumberClick}
 				convertNumber={convertNumber}
+				onDeleteClick={onDeleteClick}
 				>
 			</NumbersKeyboard>
 			<center>

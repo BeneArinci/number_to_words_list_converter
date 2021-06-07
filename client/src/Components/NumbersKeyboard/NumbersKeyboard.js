@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import './NumbersKeyboard.css'
 
-const NumbersKeyboard = ({onNumberClick, convertNumber}) => {
+const NumbersKeyboard = ({onNumberClick, convertNumber, onDeleteClick}) => {
 	return (
 		<Container className='keyboard center'>
 			<Row className='first-row row'>
@@ -83,7 +83,8 @@ const NumbersKeyboard = ({onNumberClick, convertNumber}) => {
 			</Col>
 			<Col>
 			<button
-				className="delete key"> 
+				className="delete key"
+				onClick={onDeleteClick}> 
 				<img src="https://image.flaticon.com/icons/svg/61/61167.svg" width="30rem" height="30rem" alt="Delete icon"></img>
 			</button>
 			</Col>
