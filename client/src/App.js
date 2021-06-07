@@ -8,15 +8,11 @@ import NumbersKeyboard from './Components/NumbersKeyboard/NumbersKeyboard'
 
 const App = () => {
 
-	const [ getInput, setGetInput ] = useState(null)
+	const [ getInput, setGetInput ] = useState('')
 	const [ getWordsList, setGetWordsList ] = useState([])
 
-	const onInputChange = (event) => {
-		setGetInput(event.target.value)
-	}
-
-	const onNumberClick = (event) => {
-		console.log(event.target.value)
+	const onNumberClick = (number) => {
+		setGetInput(getInput+number)
 	}
 
 	const convertNumber = async (event) => {
@@ -29,15 +25,20 @@ const App = () => {
 
   return (
 		<div>
-			<NumbersKeyboard onNumberClick={onNumberClick}></NumbersKeyboard>
+			<NumbersKeyboard 
+				onNumberClick={onNumberClick}
+				convertNumber={convertNumber}
+				>
+			</NumbersKeyboard>
 			<center>
-				<form>
+		
 					<label>
 							Enter your number:
-					<input type="text" onChange={onInputChange}/>
 					</label>
-					<input type="submit" value="Convert" onClick={(e)=>{convertNumber(e)}}/>
-				</form>
+					<div height='3rem'>
+						<h1>{getInput}</h1>
+					</div>	
+		
 			</center>
 			<Row className="justify-content-md-center">
 			<ListGroup variant='flush'>
