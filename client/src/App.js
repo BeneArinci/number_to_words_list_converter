@@ -1,10 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useState } from 'react';
-import ListGroup from 'react-bootstrap/listGroup';
+
 import Row from 'react-bootstrap/Row'
 
 import NumbersKeyboard from './Components/NumbersKeyboard/NumbersKeyboard'
-import InputPanel from'./Components/InputPanel/InputPanel'
+import InputPanel from './Components/InputPanel/InputPanel'
+import WordsList from './Components/WordsList/WordsList'
 
 
 const App = () => {
@@ -32,31 +33,17 @@ const App = () => {
 		<div>
             <InputPanel getInput={getInput}>
             </InputPanel>
+
 			<NumbersKeyboard 
 				onNumberClick={onNumberClick}
 				convertNumber={convertNumber}
 				onDeleteClick={onDeleteClick}
 				>
 			</NumbersKeyboard>
-            
-			
-			<Row className="justify-content-md-center">
-			<ListGroup variant='flush'>
-				{
-					getWordsList ? 
-					getWordsList.map((word, i) => {
-						console.log("word",word)
-						return <ListGroup.Item>{word}</ListGroup.Item>
-					})
-					: null
-				}
-		  </ListGroup>
-			</Row>
-			
+
+            <WordsList getWordsList={getWordsList}>
+            </WordsList>
 		</div>
-	
-
-
   );
 }
 
