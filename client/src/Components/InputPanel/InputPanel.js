@@ -9,7 +9,6 @@ const InputPanel = ({getInput}) => {
             <span >
                 <h1>{getInput}</h1>
             </span>
-            
         </div>	
     )
 

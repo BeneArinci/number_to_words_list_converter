@@ -1,16 +1,12 @@
-/* .center {
-    margin: auto;
-    padding: 10px;
-} */
-
 .key {
     border-radius: 50%;
+    border-color: rgb(75, 216, 47);
     font-size: 100%;
     width: 5em;
     height: 5em;
     display:block;
-    background-color: cadetblue;
-    box-shadow: 0 4px 1px 0 rgba(80, 78, 78, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(79, 204, 146);
+    box-shadow: 0 4px 1px 0 rgba(160, 157, 157, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .col {
@@ -25,17 +21,13 @@
 .row {
     width: 20em;
     min-width: 20em;
-    /* display:-ms-grid; */
     margin: auto;
     padding: 10px;
 }
 
 .keyboard {
-    width: 50em;
-    min-width: 50em;
-   
+    width: 100vp;
     padding:1rem;
-  
 }
 
 

@@ -8,7 +8,7 @@ const NumbersKeyboard = ({onNumberClick, convertNumber, onDeleteClick}) => {
         // <center>
             
         
-		<Container fluid className='keyboard center'>
+		<Container fluid className='keyboard'>
 			<Row className='first-row row'>
 				<Col className='col'>
 					<button className="key"

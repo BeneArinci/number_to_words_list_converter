@@ -1,8 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useState } from 'react';
 
-import Row from 'react-bootstrap/Row'
-
 import NumbersKeyboard from './Components/NumbersKeyboard/NumbersKeyboard'
 import InputPanel from './Components/InputPanel/InputPanel'
 import WordsList from './Components/WordsList/WordsList'
@@ -11,7 +9,8 @@ import WordsList from './Components/WordsList/WordsList'
 const App = () => {
 
 	const [ getInput, setGetInput ] = useState('')
-	const [ getWordsList, setGetWordsList ] = useState([])
+	const [ wordsList, setwordsList ] = useState([])
+    const [ convertOn, setConvertOn ] = useState(false)
 
 	const onNumberClick = (number) => {
 		setGetInput(getInput+number)
@@ -19,18 +18,24 @@ const App = () => {
 
 	const onDeleteClick = () => {
 		setGetInput(getInput.slice(0, -1))
+        if(getInput.length === 0) {
+            setConvertOn(false)
+        }
 	}
 
 	const convertNumber = async (event) => {
 		event.preventDefault()
 		const apiResponse = await fetch(`http://localhost:8000/api/wordsList?number=${getInput}`)
 		const { data: wordsList } = await apiResponse.json()
-		setGetWordsList(wordsList)
-		console.log("eeeeee",wordsList[0])
+		setwordsList(wordsList)
+        if(getInput.length>0){
+            setConvertOn(true)
+        }
+        
 	}
 
   return (
-		<div>
+		<div className='app' width='100vp '>
             <InputPanel getInput={getInput}>
             </InputPanel>
 
@@ -40,9 +45,12 @@ const App = () => {
 				onDeleteClick={onDeleteClick}
 				>
 			</NumbersKeyboard>
-
-            <WordsList getWordsList={getWordsList}>
-            </WordsList>
+            {
+                convertOn && getInput
+                ? <WordsList wordsList={wordsList}></WordsList>
+                : null
+            }
+            
 		</div>
   );
 }
