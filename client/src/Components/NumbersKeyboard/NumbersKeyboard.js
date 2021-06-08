@@ -5,9 +5,6 @@ import './NumbersKeyboard.css'
 
 const NumbersKeyboard = ({onNumberClick, convertNumber, onDeleteClick}) => {
 	return (
-        // <center>
-            
-        
 		<Container fluid className='keyboard'>
 			<Row className='first-row row'>
 				<Col className='col'>
@@ -80,7 +77,7 @@ const NumbersKeyboard = ({onNumberClick, convertNumber, onDeleteClick}) => {
 			<Col className='col'>
 				<button value="0" class="key"
 				onClick={()=> onNumberClick('0')}>0
-						<span>space</span>
+						<span></span>
 					</button>
 			</Col>
 			<Col className='col'>
@@ -101,7 +98,7 @@ const NumbersKeyboard = ({onNumberClick, convertNumber, onDeleteClick}) => {
 		
 			
 		</Container>
-        // {/* </center> */}
+   
 	)
 }
 
