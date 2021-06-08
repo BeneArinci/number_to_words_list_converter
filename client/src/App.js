@@ -4,6 +4,7 @@ import ListGroup from 'react-bootstrap/listGroup';
 import Row from 'react-bootstrap/Row'
 
 import NumbersKeyboard from './Components/NumbersKeyboard/NumbersKeyboard'
+import InputPanel from'./Components/InputPanel/InputPanel'
 
 
 const App = () => {
@@ -29,22 +30,16 @@ const App = () => {
 
   return (
 		<div>
+            <InputPanel getInput={getInput}>
+            </InputPanel>
 			<NumbersKeyboard 
 				onNumberClick={onNumberClick}
 				convertNumber={convertNumber}
 				onDeleteClick={onDeleteClick}
 				>
 			</NumbersKeyboard>
-			<center>
-		
-					<label>
-							Enter your number:
-					</label>
-					<div height='3rem'>
-						<h1>{getInput}</h1>
-					</div>	
-		
-			</center>
+            
+			
 			<Row className="justify-content-md-center">
 			<ListGroup variant='flush'>
 				{
