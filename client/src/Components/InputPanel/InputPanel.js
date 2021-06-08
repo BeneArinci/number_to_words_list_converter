@@ -11,7 +11,6 @@ const InputPanel = ({getInput}) => {
             </span>
         </div>	
     )
-
 }
 
 export default InputPanel

@@ -67,36 +67,27 @@ const NumbersKeyboard = ({onNumberClick, convertNumber, onDeleteClick}) => {
 				</Col>
 			</Row>
 			<Row>
-			<Col className='col'>
-				<button
-					className="convert key"
-					onClick={convertNumber}> 
-					Convert
-				</button>
-			</Col>
-			<Col className='col'>
-				<button value="0" class="key"
-				onClick={()=> onNumberClick('0')}>0
-						<span></span>
-					</button>
-			</Col>
-			<Col className='col'>
-			<button
-				className="delete key"
-				onClick={onDeleteClick}> 
-				<img src="https://image.flaticon.com/icons/svg/61/61167.svg" width="30rem" height="30rem" alt="Delete icon"></img>
-			</button>
-			</Col>
-				
-
+                <Col className='col'>
+                    <button
+                        className="convert key"
+                        onClick={convertNumber}> 
+                        Convert
+                    </button>
+                </Col>
+                <Col className='col'>
+                    <button value="0" class="key"
+                        onClick={()=> onNumberClick('0')}>0
+                        <span></span>
+                    </button>
+                </Col>
+                <Col className='col'>
+                    <button
+                        className="delete key"
+                        onClick={onDeleteClick}> 
+                        <img src="https://image.flaticon.com/icons/svg/61/61167.svg" width="30rem" height="30rem" alt="Delete icon"></img>
+                    </button>
+                </Col>
 			</Row>
-			
-			
-		
-			
-				
-		
-			
 		</Container>
    
 	)

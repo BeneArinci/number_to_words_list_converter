@@ -1,9 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useState } from 'react';
+import './App.css'
+
 
 import NumbersKeyboard from './Components/NumbersKeyboard/NumbersKeyboard'
 import InputPanel from './Components/InputPanel/InputPanel'
 import WordsList from './Components/WordsList/WordsList'
+import Scroll from './Components/Scroll/Scroll'
 
 
 const App = () => {
@@ -20,6 +23,7 @@ const App = () => {
 		setGetInput(getInput.slice(0, -1))
         if(getInput.length === 0) {
             setConvertOn(false)
+            setGetInput('')
         }
 	}
 
@@ -35,23 +39,26 @@ const App = () => {
 	}
 
   return (
-		<div className='app' width='100vp '>
-            <InputPanel getInput={getInput}>
-            </InputPanel>
+    <div className='app' style={{backgroundImage:"url(/phone_background.png)", backgroundSize:'contain', height: '60rem'}}>
+        <InputPanel getInput={getInput}/>
 
-			<NumbersKeyboard 
-				onNumberClick={onNumberClick}
-				convertNumber={convertNumber}
-				onDeleteClick={onDeleteClick}
-				>
-			</NumbersKeyboard>
-            {
-                convertOn && getInput
-                ? <WordsList wordsList={wordsList}></WordsList>
-                : null
-            }
-            
-		</div>
+        <div className='words-container-placeholder' style={{height: '3em', marginTop:'5em', marginBottom:'4em'}}>
+        {
+            convertOn && getInput && wordsList.length > 0 ? 
+            <Scroll>
+                <WordsList wordsList={wordsList}/>
+            </Scroll>
+            : null
+        }
+        </div>
+
+        <NumbersKeyboard 
+            onNumberClick={onNumberClick}
+            convertNumber={convertNumber}
+            onDeleteClick={onDeleteClick}
+            >
+        </NumbersKeyboard>
+    </div>
   );
 }
 

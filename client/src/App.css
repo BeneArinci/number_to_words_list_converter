@@ -1,8 +1,7 @@
-.container {
-    height:100vp
-}
 
-.row {
-    width:max-content;
-    
+.app {
+    margin: auto;
+    width: 350px;
+    height: 60rem;
+    background-size: contain;
 }
