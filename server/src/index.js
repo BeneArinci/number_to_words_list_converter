@@ -22,7 +22,7 @@ app.use(express.json());
 
 app.get('/', (req, res) => {
   res.json({
-    message: 'Hello! No content here atm ;)',
+    message: 'Welcome to the number-to-words converters API!',
   });
 });
 
@@ -31,7 +31,4 @@ app.use('/api/wordsList', wordsList);
 app.use(notFound);
 app.use(errorHandler);
 
-const port = process.env.PORT || 8000;
-app.listen(port, () => {
-  console.log(`listening at 'htttp://localhost:${port}`);
-});
+module.exports = app;

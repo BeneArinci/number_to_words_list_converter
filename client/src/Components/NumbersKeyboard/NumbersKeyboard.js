@@ -5,7 +5,8 @@ import './NumbersKeyboard.css'
 
 const NumbersKeyboard = ({onNumberClick, convertNumber, onDeleteClick}) => {
 	return (
-		<Container fluid className='keyboard'>
+    <div style={{width: '100vp', margin:'auto'}}>
+        <Container fluid className='keyboard'>
 			<Row className='first-row row'>
 				<Col className='col'>
 					<button className="key"
@@ -89,6 +90,8 @@ const NumbersKeyboard = ({onNumberClick, convertNumber, onDeleteClick}) => {
                 </Col>
 			</Row>
 		</Container>
+    </div>
+		
    
 	)
 }

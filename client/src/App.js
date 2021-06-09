@@ -39,7 +39,10 @@ const App = () => {
 	}
 
   return (
-    <div className='app' style={{backgroundImage:"url(/phone_background.png)", backgroundSize:'contain', height: '60rem'}}>
+    <div className='app' style={{display:'block', height:'100vp'}}>
+
+   
+    <div className='phone' style={{backgroundImage:"url(/phone_background.png)", backgroundSize:'contain'}}>
         <InputPanel getInput={getInput}/>
 
         <div className='words-container-placeholder' style={{height: '3em', marginTop:'5em', marginBottom:'4em'}}>
@@ -58,6 +61,7 @@ const App = () => {
             onDeleteClick={onDeleteClick}
             >
         </NumbersKeyboard>
+    </div>
     </div>
   );
 }

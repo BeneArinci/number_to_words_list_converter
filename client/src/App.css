@@ -1,7 +1,9 @@
 
-.app {
+.phone {
     margin: auto;
     width: 350px;
-    height: 60rem;
-    background-size: contain;
+    height: 45em;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
