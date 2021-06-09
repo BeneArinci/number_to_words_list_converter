@@ -28,42 +28,39 @@ const App = () => {
 	}
 
 	const convertNumber = async (event) => {
-		event.preventDefault()
-		const apiResponse = await fetch(`http://localhost:8000/api/wordsList?number=${getInput}`)
-		const { data: wordsList } = await apiResponse.json()
-		setwordsList(wordsList)
+		event.preventDefault();
+		const apiResponse = await fetch(`http://localhost:8000/api/wordsList?number=${getInput}`);
+		const { data: wordsList } = await apiResponse.json();
+		setwordsList(wordsList);
         if(getInput.length>0){
             setConvertOn(true)
         }
         
 	}
 
-  return (
-    <div className='app' style={{display:'block', height:'100vp'}}>
+    return (
+        <div className='app' style={{backgroundImage:"url(/phone_background.png)", backgroundSize:'contain'}}>
+            <InputPanel getInput={getInput}/>
 
-   
-    <div className='phone' style={{backgroundImage:"url(/phone_background.png)", backgroundSize:'contain'}}>
-        <InputPanel getInput={getInput}/>
+            <div className='words-container-placeholder' style={{height: '3em', marginTop:'5em', marginBottom:'4em'}}>
+            {
+                convertOn && getInput && wordsList.length > 0 ? 
+                <Scroll>
+                    <WordsList wordsList={wordsList}/>
+                </Scroll>
+                : null
+            }
+            </div>
 
-        <div className='words-container-placeholder' style={{height: '3em', marginTop:'5em', marginBottom:'4em'}}>
-        {
-            convertOn && getInput && wordsList.length > 0 ? 
-            <Scroll>
-                <WordsList wordsList={wordsList}/>
-            </Scroll>
-            : null
-        }
+            <NumbersKeyboard 
+                onNumberClick={onNumberClick}
+                convertNumber={convertNumber}
+                onDeleteClick={onDeleteClick}
+                >
+            </NumbersKeyboard>
         </div>
 
-        <NumbersKeyboard 
-            onNumberClick={onNumberClick}
-            convertNumber={convertNumber}
-            onDeleteClick={onDeleteClick}
-            >
-        </NumbersKeyboard>
-    </div>
-    </div>
-  );
+    );
 }
 
 export default App;

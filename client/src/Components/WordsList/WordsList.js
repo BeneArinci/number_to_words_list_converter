@@ -3,7 +3,7 @@ import './WordsList.css'
 
 const WordsList = ( {wordsList} ) => {
     return (
-        <ListGroup horizontal className="words-list">
+        <ListGroup horizontal className="words-list" >
             {
                 wordsList ? 
                 wordsList.map((word, i) => {
