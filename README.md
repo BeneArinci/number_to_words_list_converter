@@ -25,8 +25,8 @@ From another terminal enter in the **Client** directory then:
 -  run "npm start" (or use yarn)
 -  the port should be the 3000
 
-## How does it look like
-
+## How it looks like
+<img src="https://github.com/BeneArinci/number_to_words_list_converter/blob/master/images/app.png" width="500" height="auto">
 
 ## Areas of improvement
 
