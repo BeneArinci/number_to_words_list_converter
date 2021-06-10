@@ -1,7 +1,8 @@
 ## Hellooo :) 
 Hello everybody and thank you very much for giving me this opportunity! <br>
 I very much enjoyed working on this web app development even if I was a bit rusty when it came to work with React! It's unbelievable what you forget about a technology if you don't use it for months!<br>
-On top, I wanted to specify that I haven't used Redux. The main reason for this is that I don't have experience with. I also believe that there wasn't a real need for Redux in developing a small app like this one <br>
+I'd like to specify that I haven't used Redux. The main reason for this is that I don't have experience with. I also believe that there wasn't a real need for Redux in developing a small app like this one <br>
+I am satisfied from what I've been able to build but, at the same time, I indicated a few areas for improvements below :)
 I am looking forward to receiving your feedback on this task but, first, let me give you some more info about how I developed it.
 
 ## Main functionality
@@ -32,7 +33,10 @@ From another terminal enter in the **Client** directory then:
 
 MANY! :) 
 I wasn't able to dedicate as much time as I planned to this task. Honestly there were many things I did not remember and it was a great opportunity to review them but also to learn new things. Even if I am happy with the final result, there are many areas I would improve if I had more time to spend on the task:
+- improve code project structure quality
 - test quality and coverage. I manage to write tests but absolutely not enough. More and better tests are a must. I also got blocked while trying to test some aspects of the react app. I need to study more :) 
+- My react app could be divided in even more components
+- Using Redux for state management even just for having some experience with it
 - Improve the style. Not super happy with the style, there is huuuge room for improvement! Right now it's very basic and it does not explain much what it is doing..
 - Adding an extra functionality: returning only correct English words.
 
