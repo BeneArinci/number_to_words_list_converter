@@ -1,4 +1,4 @@
-# Hello and welcome to my Number2wordsListConverter app
+# Number to Words-list Converter
 
 
 ## Main functionality
