@@ -1,9 +1,5 @@
-## Hellooo :) 
-Hello everybody and thank you very much for giving me this opportunity! <br>
-I very much enjoyed working on this web app development even if I was a bit rusty when it came to work with React! It's unbelievable what you forget about a technology if you don't use it for months!<br>
-I'd like to specify that I haven't used Redux. The main reason for this is that I don't have experience with. I also believe that there wasn't a real need for Redux in developing a small app like this one <br>
-I am satisfied from what I've been able to build but, at the same time, I indicated a few areas for improvements below :)
-I am looking forward to receiving your feedback on this task but, first, let me give you some more info about how I developed it.
+# Hello and welcome to my Number2wordsListConverter app
+
 
 ## Main functionality
 This app has one main purpose: it lets the user enter a specific combination of numbers, suggesting which letters are linked to every single number, and it shows them all the possible combinations of words in the style of T9. <br>
@@ -15,6 +11,7 @@ I developed the backend/server by using Node.js and Express.js and other useful 
 For testing purposes, I used Jest. On the server side I also used the "supertest" framework and, on the client side, I used the React specific Jest package.
 
 ## How to run the app
+First of all you should clone this repository and open it in your code editor. You need two terminals opened. One for starting the server and the other for the client. <br>
 From one terminal enter in the **Server** directory then:  
 - install the packages/dependencies using npm or yarn
 - create and compile an .env file following the suggested structure. Specify **NODE_ENV=development** and **CORS_ORIGIN=http://localhost:3000**
@@ -27,16 +24,23 @@ From another terminal enter in the **Client** directory then:
 -  the port should be the 3000
 
 ## How it looks like
-<img src="https://github.com/BeneArinci/number_to_words_list_converter/blob/master/images/app.png" width="500" height="auto">
+<p align="center">
+  <img src="https://github.com/BeneArinci/number_to_words_list_converter/blob/master/images/app.png" width="500" height="auto"/>
+</p>
+
 
 ## Areas of improvement
 
 MANY! :) 
-I wasn't able to dedicate as much time as I planned to this task. Honestly there were many things I did not remember and it was a great opportunity to review them but also to learn new things. Even if I am happy with the final result, there are many areas I would improve if I had more time to spend on the task:
+I'd say that this is my MVP in terms of functionality. As soon as possible I'd like to start working again on this app. <br>
+What I already have in mind is:
+- Adding an extra functionality: returning only correct English words.
 - improve code project structure quality
 - test quality and coverage. I manage to write tests but absolutely not enough. More and better tests are a must. I also got blocked while trying to test some aspects of the react app. I need to study more :) 
 - My react app could be divided in even more components
 - Using Redux for state management even just for having some experience with it
-- Improve the style. Not super happy with the style, there is huuuge room for improvement! Right now it's very basic and it does not explain much what it is doing..
-- Adding an extra functionality: returning only correct English words.
+- Improve the style. Not super happy with the style, there is huuuge room for improvement! Right now it's very basic and not intuitive enough..
+
+I am also open for suggestions! :) <br>
+Thanks again for visiting
 
